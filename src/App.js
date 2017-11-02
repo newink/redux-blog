@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Col, Grid, Jumbotron, MenuItem, Nav, Navbar, NavDropdown, NavItem, Row} from "react-bootstrap";
+import { Col, Grid, Jumbotron, MenuItem, Nav, Navbar, NavDropdown, NavItem, Row } from "react-bootstrap";
+
+import PostsIndex from './components/PostsIndex';
 
 class App extends Component {
   render() {
@@ -35,9 +37,11 @@ class App extends Component {
                 <Row>
                     <Col md={12}>
                         <Jumbotron>
+                            <h1>Redux Blog</h1>
                         </Jumbotron>
                     </Col>
                     <Col md={12}>
+                        <PostsIndex/>
                     </Col>
                 </Row>
             </Grid>
