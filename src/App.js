@@ -3,6 +3,8 @@ import './App.css';
 import { Col, Grid, Jumbotron, MenuItem, Nav, Navbar, NavDropdown, NavItem, Row } from "react-bootstrap";
 
 import PostsIndex from './components/PostsIndex';
+import { BrowserRouter, Route } from "react-router-dom";
+import PostsNew from "./components/PostsNew";
 
 class App extends Component {
   render() {
@@ -41,7 +43,12 @@ class App extends Component {
                         </Jumbotron>
                     </Col>
                     <Col md={12}>
-                        <PostsIndex/>
+                        <BrowserRouter>
+                            <div>
+                                <Route path="/" component={PostsIndex}/>
+                                <Route path="/posts/new" component={PostsNew}/>
+                            </div>
+                        </BrowserRouter>
                     </Col>
                 </Row>
             </Grid>
